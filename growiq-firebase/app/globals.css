@@ -1,0 +1,193 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* =====================================================
+   GROWIQ — Digital Marketing Optimization Platform
+   Color System: Indigo-teal brand, neutral grays
+   ===================================================== */
+
+:root {
+  /* Brand colors */
+  --brand:          oklch(0.52 0.22 262);   /* indigo-600 */
+  --brand-light:    oklch(0.65 0.19 262);   /* indigo-400 */
+  --brand-muted:    oklch(0.93 0.06 262);   /* indigo-50 */
+  --teal:           oklch(0.65 0.14 185);   /* teal-500 */
+  --teal-muted:     oklch(0.93 0.05 185);   /* teal-50 */
+  --amber:          oklch(0.76 0.17 75);    /* amber-500 */
+  --rose:           oklch(0.62 0.22 25);    /* rose-500 */
+  --green:          oklch(0.67 0.18 148);   /* emerald-500 */
+
+  /* Semantic tokens */
+  --background:           oklch(0.975 0.005 262);
+  --foreground:           oklch(0.15 0.02 262);
+  --card:                 oklch(1 0 0);
+  --card-foreground:      oklch(0.15 0.02 262);
+  --popover:              oklch(1 0 0);
+  --popover-foreground:   oklch(0.15 0.02 262);
+  --primary:              var(--brand);
+  --primary-foreground:   oklch(0.99 0 0);
+  --secondary:            oklch(0.96 0.01 262);
+  --secondary-foreground: oklch(0.30 0.04 262);
+  --muted:                oklch(0.96 0.008 262);
+  --muted-foreground:     oklch(0.50 0.03 262);
+  --accent:               var(--brand-muted);
+  --accent-foreground:    var(--brand);
+  --destructive:          var(--rose);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border:               oklch(0.90 0.01 262);
+  --input:                oklch(0.92 0.01 262);
+  --ring:                 var(--brand);
+  --radius:               0.625rem;
+
+  /* Sidebar */
+  --sidebar:                    oklch(0.16 0.04 262);
+  --sidebar-foreground:         oklch(0.90 0.01 262);
+  --sidebar-primary:            var(--brand-light);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent:             oklch(0.24 0.05 262);
+  --sidebar-accent-foreground:  oklch(0.90 0.01 262);
+  --sidebar-border:             oklch(0.24 0.05 262);
+  --sidebar-ring:               var(--brand-light);
+
+  /* Chart colors */
+  --chart-1: var(--brand);
+  --chart-2: var(--teal);
+  --chart-3: var(--amber);
+  --chart-4: var(--rose);
+  --chart-5: var(--green);
+
+  /* Custom semantic helpers */
+  --surface:          oklch(0.975 0.005 262);
+  --surface-raised:   oklch(1 0 0);
+  --surface-overlay:  oklch(1 0 0);
+}
+
+.dark {
+  --background:           oklch(0.12 0.025 262);
+  --foreground:           oklch(0.94 0.005 262);
+  --card:                 oklch(0.16 0.03 262);
+  --card-foreground:      oklch(0.94 0.005 262);
+  --popover:              oklch(0.16 0.03 262);
+  --popover-foreground:   oklch(0.94 0.005 262);
+  --primary:              var(--brand-light);
+  --primary-foreground:   oklch(0.99 0 0);
+  --secondary:            oklch(0.22 0.04 262);
+  --secondary-foreground: oklch(0.85 0.01 262);
+  --muted:                oklch(0.22 0.04 262);
+  --muted-foreground:     oklch(0.60 0.03 262);
+  --accent:               oklch(0.24 0.06 262);
+  --accent-foreground:    var(--brand-light);
+  --destructive:          oklch(0.55 0.20 25);
+  --destructive-foreground: oklch(0.94 0 0);
+  --border:               oklch(0.24 0.04 262);
+  --input:                oklch(0.24 0.04 262);
+  --ring:                 var(--brand-light);
+
+  --sidebar:                    oklch(0.10 0.03 262);
+  --sidebar-foreground:         oklch(0.85 0.01 262);
+  --sidebar-primary:            var(--brand-light);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent:             oklch(0.18 0.04 262);
+  --sidebar-accent-foreground:  oklch(0.85 0.01 262);
+  --sidebar-border:             oklch(0.18 0.04 262);
+  --sidebar-ring:               var(--brand-light);
+
+  --chart-1: var(--brand-light);
+  --chart-2: var(--teal);
+  --chart-3: var(--amber);
+  --chart-4: oklch(0.72 0.20 25);
+  --chart-5: var(--green);
+
+  --surface:          oklch(0.12 0.025 262);
+  --surface-raised:   oklch(0.16 0.03 262);
+  --surface-overlay:  oklch(0.20 0.04 262);
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), 'Georgia', serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-brand: var(--brand);
+  --color-brand-light: var(--brand-light);
+  --color-brand-muted: var(--brand-muted);
+  --color-teal: var(--teal);
+  --color-teal-muted: var(--teal-muted);
+  --color-amber: var(--amber);
+  --color-rose: var(--rose);
+  --color-green: var(--green);
+  /* Semantic shorthand aliases */
+  --color-success: var(--green);
+  --color-warning: var(--amber);
+  --color-danger: var(--rose);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    @apply font-serif;
+    line-height: 1.2;
+  }
+  h4, h5, h6 {
+    @apply font-sans font-semibold;
+    line-height: 1.3;
+  }
+}
+
+/* Smooth transitions on theme switch */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+/* But NOT for transforms/opacity-driven animations */
+.no-transition, .no-transition * {
+  transition: none !important;
+}
